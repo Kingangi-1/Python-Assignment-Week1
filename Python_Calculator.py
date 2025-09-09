@@ -1,25 +1,21 @@
-#simple calculator program 
+num1 = int(input("Enter the first number"))
+num2 = int(input("Enter the second number"))
+sign = input("Enter a sign ( +, -, *, /):")
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-operation = input("Enter operation (+, -, *, /): ")
-
-if operation == '+':
-  result = num1 + num2  
-  print(result)
-
-elif operation == '-'
-result = num1 - num2
-print(result)
-
-elif operation == '*'
-result = num1 * num2
-print(result)
-
-elif operation == '/'
-if num2 != 0
-print("Error! Division by zero."")
-result = num1 / num2
-print(result)
-        else
-print("Please enter a valid operator.")
+if sign == '+':
+    result = num1 + num2
+    print("Result:", result)
+elif sign == '-':
+    result = num1 - num2
+    print("Result:", result)
+elif sign == '*':
+    result = num1 * num2
+    print("Result:", result)
+elif sign == '/':
+    if num2 != 0:
+        result = num1 / num2
+        print("Result:", result)
+    else:
+        print("Error!: Division by zero is not allowed")
+else:
+   print("Invalid operator!")
